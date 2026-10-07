@@ -1,0 +1,12 @@
+Android Checkout Library
+org.solovyev.android:checkout:1.2.1
+
+Licensed under the Apache License, Version 2.0.
+
+The bundled checkout-1.2.1.aar is a locally patched build of the
+Apache-2.0-licensed Android Checkout Library. The patch adds the
+required Android receiver export flag for compatibility with modern
+Android versions.
+
+Original project:
+https://github.com/serso/android-checkout
