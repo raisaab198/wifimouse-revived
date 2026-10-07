@@ -68,8 +68,7 @@ variant.
 
 ## Maintenance status
 
-This is an **unofficial community-maintained modernization**, not an official
-new release of WifiMouse.
+This is an unofficial, independently maintained modernization, not an official new release of WifiMouse.
 
 The primary goal is compatibility maintenance rather than redesigning the
 application or adding new features.
