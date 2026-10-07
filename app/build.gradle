@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace "vivid.designs.wifimouse"
+    compileSdkVersion 37
+    defaultConfig {
+        applicationId "vivid.wifimouse.revived"
+        minSdkVersion 28
+        targetSdkVersion 36
+        versionCode 98
+        versionName "9.8"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:design:25.3.1'
+    implementation 'com.android.support:support-v4:25.3.1'
+    implementation files('libs/checkout-1.2.1.aar')
+    implementation 'com.google.android.gms:play-services-ads:11.6.0'
+    testImplementation 'junit:junit:4.12'
+}
